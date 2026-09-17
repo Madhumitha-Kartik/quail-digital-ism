@@ -1,0 +1,514 @@
+/* ==========================================================================
+   Quail Digital ISM - Component System (Kendo UI / Zoho Creator Inspired)
+   ========================================================================== */
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+  font-size: 0.82rem;
+  font-weight: 600;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: var(--brand-primary);
+  color: #ffffff;
+  border-color: var(--brand-primary);
+  box-shadow: var(--shadow-sm);
+}
+.btn-primary:hover {
+  background: var(--brand-primary-hover);
+  box-shadow: 0 4px 10px rgba(2, 132, 199, 0.35);
+}
+
+.btn-secondary {
+  background: var(--bg-surface);
+  color: var(--text-main);
+  border-color: var(--border-strong);
+}
+.btn-secondary:hover {
+  background: var(--bg-surface-subtle);
+  border-color: #94a3b8;
+}
+
+.btn-success {
+  background: #10b981;
+  color: #ffffff;
+}
+.btn-success:hover {
+  background: #059669;
+  box-shadow: 0 4px 10px rgba(16, 185, 129, 0.35);
+}
+
+.btn-danger {
+  background: #ef4444;
+  color: #ffffff;
+}
+.btn-danger:hover {
+  background: #dc2626;
+  box-shadow: 0 4px 10px rgba(239, 68, 68, 0.35);
+}
+
+.btn-outline-danger {
+  background: transparent;
+  color: #dc2626;
+  border-color: #fca5a5;
+}
+.btn-outline-danger:hover {
+  background: #fef2f2;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text-secondary);
+}
+.btn-ghost:hover {
+  background: var(--bg-surface-subtle);
+  color: var(--text-main);
+}
+
+.btn-sm {
+  padding: 0.35rem 0.65rem;
+  font-size: 0.75rem;
+}
+
+.btn-lg {
+  padding: 0.65rem 1.25rem;
+  font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   Badges & Status Tags
+   ========================================================================== */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-full);
+  font-size: 0.72rem;
+  font-weight: 600;
+  line-height: 1.2;
+  border: 1px solid transparent;
+}
+
+.badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-full);
+}
+
+/* Statuses */
+.badge-status-created {
+  background: var(--status-created-bg);
+  color: var(--status-created-text);
+  border-color: var(--status-created-border);
+}
+.badge-status-created .badge-dot { background: var(--status-created-text); }
+
+.badge-status-assigned {
+  background: var(--status-assigned-bg);
+  color: var(--status-assigned-text);
+  border-color: var(--status-assigned-border);
+}
+.badge-status-assigned .badge-dot { background: var(--status-assigned-text); }
+
+.badge-status-scheduled {
+  background: var(--status-scheduled-bg);
+  color: var(--status-scheduled-text);
+  border-color: var(--status-scheduled-border);
+}
+.badge-status-scheduled .badge-dot { background: var(--status-scheduled-text); }
+
+.badge-status-inprogress {
+  background: var(--status-progress-bg);
+  color: var(--status-progress-text);
+  border-color: var(--status-progress-border);
+}
+.badge-status-inprogress .badge-dot { background: var(--status-progress-text); }
+
+.badge-status-completed {
+  background: var(--status-submitted-bg);
+  color: var(--status-submitted-text);
+  border-color: var(--status-submitted-border);
+}
+.badge-status-completed .badge-dot { background: var(--status-submitted-text); }
+
+.badge-status-verified {
+  background: var(--status-verified-bg);
+  color: var(--status-verified-text);
+  border-color: var(--status-verified-border);
+}
+.badge-status-verified .badge-dot { background: var(--status-verified-text); }
+
+.badge-status-rejected {
+  background: var(--status-rejected-bg);
+  color: var(--status-rejected-text);
+  border-color: var(--status-rejected-border);
+}
+.badge-status-rejected .badge-dot { background: var(--status-rejected-text); }
+
+/* Priority Badges */
+.badge-priority-low {
+  background: var(--priority-low-bg);
+  color: var(--priority-low-text);
+}
+.badge-priority-medium {
+  background: var(--priority-med-bg);
+  color: var(--priority-med-text);
+}
+.badge-priority-high {
+  background: var(--priority-high-bg);
+  color: var(--priority-high-text);
+}
+.badge-priority-critical {
+  background: var(--priority-crit-bg);
+  color: var(--priority-crit-text);
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   Kendo-Style Data Grid
+   ========================================================================== */
+
+.kendo-grid-container {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.grid-toolbar {
+  padding: 0.85rem 1.25rem;
+  border-bottom: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fafbfc;
+  gap: 1rem;
+}
+
+.grid-search {
+  position: relative;
+  max-width: 320px;
+  flex: 1;
+}
+
+.grid-search input {
+  width: 100%;
+  padding: 0.4rem 0.75rem 0.4rem 2rem;
+  font-size: 0.82rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  outline: none;
+  background: #ffffff;
+}
+.grid-search input:focus {
+  border-color: var(--brand-primary);
+}
+
+.grid-search-icon {
+  position: absolute;
+  left: 0.65rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+}
+
+.grid-toolbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.kendo-table-wrapper {
+  overflow-x: auto;
+  position: relative;
+}
+
+.kendo-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.82rem;
+}
+
+.kendo-table th {
+  background: #f1f5f9;
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  border-bottom: 2px solid var(--border-subtle);
+  white-space: nowrap;
+  user-select: none;
+}
+
+.kendo-table th.sortable {
+  cursor: pointer;
+}
+.kendo-table th.sortable:hover {
+  background: #e2e8f0;
+}
+
+.kendo-table td {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--border-subtle);
+  color: var(--text-main);
+  vertical-align: middle;
+}
+
+.kendo-table tbody tr {
+  transition: background var(--transition-fast);
+}
+
+.kendo-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.kendo-table tbody tr.row-urgent {
+  background: #fef2f2;
+}
+.kendo-table tbody tr.row-urgent:hover {
+  background: #fee2e2;
+}
+
+.grid-pagination {
+  padding: 0.75rem 1.25rem;
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fafbfc;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+.pagination-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* ==========================================================================
+   Form Controls
+   ========================================================================== */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 1rem;
+}
+
+.form-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.form-label.required::after {
+  content: "*";
+  color: #ef4444;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-md);
+  background: #ffffff;
+  font-size: 0.84rem;
+  color: var(--text-main);
+  outline: none;
+  transition: all var(--transition-fast);
+}
+
+.form-control:focus {
+  border-color: var(--border-focus);
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.15);
+}
+
+.form-control:disabled, .form-control[readonly] {
+  background: var(--bg-surface-subtle);
+  color: var(--text-muted);
+  cursor: not-allowed;
+}
+
+.form-helper {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.form-error {
+  font-size: 0.72rem;
+  color: #ef4444;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.form-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+/* ==========================================================================
+   Progress Stepper (Multi-step forms & Installation record)
+   ========================================================================== */
+
+.stepper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+}
+
+.stepper::before {
+  content: "";
+  position: absolute;
+  top: 18px;
+  left: 3rem;
+  right: 3rem;
+  height: 2px;
+  background: var(--border-strong);
+  z-index: 1;
+}
+
+.step-item {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.step-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  background: var(--bg-surface);
+  border: 2px solid var(--border-strong);
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+  transition: all var(--transition-normal);
+}
+
+.step-title {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-align: center;
+  max-width: 110px;
+}
+
+.step-item.active .step-circle {
+  border-color: var(--brand-primary);
+  background: var(--brand-primary);
+  color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.2);
+}
+.step-item.active .step-title {
+  color: var(--brand-primary);
+  font-weight: 700;
+}
+
+.step-item.completed .step-circle {
+  border-color: #10b981;
+  background: #10b981;
+  color: #ffffff;
+}
+.step-item.completed .step-title {
+  color: #059669;
+}
+
+/* ==========================================================================
+   Alert Banners & Callouts
+   ========================================================================== */
+
+.alert-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-md);
+  border-left: 4px solid;
+  margin-bottom: 1.25rem;
+}
+
+.alert-banner.urgent-rejection {
+  background: #fef2f2;
+  border-color: #ef4444;
+  color: #991b1b;
+}
+
+.alert-banner.warning {
+  background: #fffbeb;
+  border-color: #f59e0b;
+  color: #92400e;
+}
+
+.alert-banner.info {
+  background: #eff6ff;
+  border-color: #3b82f6;
+  color: #1e40af;
+}
+
+.alert-banner.success {
+  background: #ecfdf5;
+  border-color: #10b981;
+  color: #065f46;
+}
+
+.alert-banner-icon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.alert-banner-content {
+  flex: 1;
+}
+
+.alert-banner-title {
+  font-weight: 700;
+  font-size: 0.88rem;
+  margin-bottom: 0.2rem;
+}
+
+.alert-banner-desc {
+  font-size: 0.8rem;
+  line-height: 1.4;
+}

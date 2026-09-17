@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quail Digital | ISM Enterprise System (Zoho Creator Premium)</title>
+  <meta name="description" content="Quail Digital Installation & Service Management (ISM) Single Digital Platform for Bluetooth Headset Packages, Multi-Location Jobs, and Support Tickets.">
+  
+  <!-- Design System Stylesheets -->
+  <link rel="stylesheet" href="./styles/variables.css">
+  <link rel="stylesheet" href="./styles/base.css">
+  <link rel="stylesheet" href="./styles/layout.css">
+  <link rel="stylesheet" href="./styles/components.css">
+  <link rel="stylesheet" href="./styles/modals.css">
+  <link rel="stylesheet" href="./styles/dashboards.css">
+</head>
+<body>
+  <div id="app-container">
+    <!-- Top Enterprise Navigation Bar -->
+    <header class="topbar">
+      <div class="topbar-left">
+        <a class="brand-logo" id="brand-home-link" title="Quail Digital ISM System">
+          <div class="brand-symbol">QD</div>
+          <div class="brand-meta">
+            <span class="brand-name">
+              Quail Digital <span class="brand-edition">Zoho Creator Enterprise</span>
+            </span>
+            <span class="brand-subtitle">Installation & Service Management (ISM) System</span>
+          </div>
+        </a>
+
+        <!-- Global Search -->
+        <div class="global-search">
+          <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+          </svg>
+          <input type="text" id="global-search-input" placeholder="Search customers, jobs, tickets, serials...">
+        </div>
+      </div>
+
+      <!-- Topbar Center: Dynamic Role Switcher (Module 8.1 & 8.3) -->
+      <div class="topbar-center">
+        <div class="role-switcher-container" title="Switch between active system roles">
+          <button class="role-tab-btn active" data-role="pm" id="role-tab-pm">
+            <span>Project Management</span>
+            <span class="role-badge">PM</span>
+          </button>
+          <button class="role-tab-btn" data-role="subcontractor" id="role-tab-sub">
+            <span>Field Subcontractor</span>
+            <span class="role-badge">Tech</span>
+          </button>
+          <button class="role-tab-btn" data-role="cs" id="role-tab-cs">
+            <span>Customer Service</span>
+            <span class="role-badge">CS</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Topbar Right: Notification Bell, Email Log & Profile -->
+      <div class="topbar-right">
+        <!-- In-App Email Alerts Log Drawer Trigger -->
+        <button class="topbar-action-btn" id="email-log-btn" title="In-App Email Alerts Log (Module 8.2.8)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+          </svg>
+        </button>
+
+        <!-- Notification Bell with Dropdown Preview -->
+        <div style="position: relative;">
+          <button class="topbar-action-btn" id="notif-bell-btn" title="In-App Notifications (Module 8.2.8)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/>
+            </svg>
+            <span class="unread-badge" id="notif-badge">4</span>
+          </button>
+          <div class="notification-dropdown hidden" id="notif-dropdown">
+            <!-- Rendered dynamically -->
+          </div>
+        </div>
+
+        <!-- Active User Profile Badge -->
+        <div class="user-profile-badge">
+          <div class="user-avatar" id="user-avatar">SJ</div>
+          <div class="user-meta">
+            <span class="user-name" id="user-name">Sarah Jenkins</span>
+            <span class="user-role-label" id="user-role-label">Operations Lead</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Workspace Layout -->
+    <div class="main-layout">
+      <!-- Role-tailored Sidebar -->
+      <aside class="sidebar">
+        <nav class="sidebar-nav" id="sidebar-nav">
+          <!-- Rendered dynamically by role -->
+        </nav>
+
+        <div class="sidebar-footer">
+          <div class="platform-badge-card">
+            <div class="platform-icon">ZC</div>
+            <div class="platform-info">
+              <span class="platform-title">Zoho Creator Premium</span>
+              <span class="platform-sub">Kendo UI Enterprise Stack</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Content Canvas -->
+      <main class="content-canvas" id="content-canvas">
+        <header class="view-header">
+          <div class="view-header-left">
+            <div class="breadcrumbs" id="breadcrumbs">
+              <span>Platform</span> <span>›</span> <span class="breadcrumb-active">Dashboard</span>
+            </div>
+            <h1 class="view-title" id="view-title">Project Management & Quality Gate</h1>
+            <p class="view-description" id="view-description">Single digital platform for Quail Digital Bluetooth headsets lifecycle.</p>
+          </div>
+          <div class="view-header-actions" id="header-actions">
+            <!-- Rendered dynamically per view -->
+          </div>
+        </header>
+
+        <div class="view-body" id="view-body">
+          <!-- Active view components inserted here -->
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- Modal and Drawer Mount Points -->
+  <div id="modal-root"></div>
+  <div id="drawer-root"></div>
+
+  <!-- Application Logic Scripts -->
+  <script src="./scripts/data.js"></script>
+  <script src="./scripts/state.js"></script>
+  <script src="./scripts/chartHelper.js"></script>
+  <script src="./scripts/app.js"></script>
+</body>
+</html>
